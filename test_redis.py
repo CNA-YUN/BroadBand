@@ -4,6 +4,7 @@ if __name__ == "__main__":
     # 测试连接
     if test_connection():
         # 测试读写
+        print()
         redis_client.setex("test:key", 60, "hello redis")
         value = redis_client.get("test:key")
         print(f"✅ 读写测试：{value}")
